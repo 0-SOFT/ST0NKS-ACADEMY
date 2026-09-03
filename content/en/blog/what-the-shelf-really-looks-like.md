@@ -4,6 +4,7 @@ description: A median of 0.348 %, three quarters below 1.3 % — and why the fir
 slug: what-the-shelf-really-looks-like
 pair: what-the-shelf-really-looks-like
 date: 2026-09-03
+cover: /media/scanner-shelf-b0a5be2402f8fa09.png
 topics: [measurement, shelf, spread]
 ---
 

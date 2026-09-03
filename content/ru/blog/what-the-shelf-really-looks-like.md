@@ -4,6 +4,7 @@ description: Медиана 0,348 %, три четверти ниже 1,3 % — 
 slug: what-the-shelf-really-looks-like
 pair: what-the-shelf-really-looks-like
 date: 2026-09-03
+cover: /media/scanner-shelf-b0a5be2402f8fa09.png
 topics: [замер, витрина, спред]
 ---
 
