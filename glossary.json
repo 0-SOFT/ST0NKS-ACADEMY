@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "comment": "Словарь терминов интерфейса. Поле slug — НЕОБЯЗАТЕЛЬНОЕ и ставится только тогда, когда статья УЖЕ написана: ссылка в никуда выглядит рабочей ровно до клика. Пояснение полезно само по себе, и термин без статьи вполне живой.",
+  "terms": [
+    {
+      "id": "arbitrage",
+      "slug": "what-is-arbitrage",
+      "title": { "en": "Arbitrage", "ru": "Арбитраж" },
+      "short": {
+        "en": "Buying an asset where it is cheaper and selling it, at the same time, where it is dearer. The whole difficulty hides in the words \"at the same time\".",
+        "ru": "Покупка актива там, где он дешевле, и одновременная продажа там, где он дороже. Вся сложность прячется в слове «одновременная»."
+      }
+    },
+    {
+      "id": "spread",
+      "slug": "what-is-arbitrage",
+      "title": { "en": "Spread", "ru": "Спред" },
+      "short": {
+        "en": "The price difference between two venues, as a percentage. Not profit: fees, slippage and the network fee are still to be subtracted from it.",
+        "ru": "Разница цен между двумя площадками в процентах. Это не прибыль: из неё ещё вычтут комиссии, проскальзывание и комиссию сети."
+      }
+    },
+    {
+      "id": "orderbook",
+      "title": { "en": "Order book", "ru": "Стакан" },
+      "short": {
+        "en": "The list of live buy and sell orders with their sizes. The top line shows the best price, but only for the amount that actually sits there.",
+        "ru": "Список живых заявок на покупку и продажу с их объёмами. Верхняя строка показывает лучшую цену — но только на тот объём, который там действительно лежит."
+      }
+    },
+    {
+      "id": "slippage",
+      "title": { "en": "Slippage", "ru": "Проскальзывание" },
+      "short": {
+        "en": "The gap between the price you saw and the price you got. A large order eats through the book and fills worse than its top line promised.",
+        "ru": "Разрыв между увиденной ценой и полученной. Крупная заявка проедает стакан и исполняется хуже, чем обещала верхняя строка."
+      }
+    },
+    {
+      "id": "funding",
+      "title": { "en": "Funding rate", "ru": "Фандинг" },
+      "short": {
+        "en": "A periodic payment between long and short holders of a perpetual contract. It can turn a profitable position into a losing one if you hold it long enough.",
+        "ru": "Периодическая выплата между держателями длинных и коротких позиций в бессрочном контракте. При долгом удержании способен сделать прибыльную позицию убыточной."
+      }
+    },
+    {
+      "id": "taker-fee",
+      "title": { "en": "Taker fee", "ru": "Комиссия taker" },
+      "short": {
+        "en": "What the venue charges for an order that executes immediately against the book. Arbitrage almost always pays it: waiting means losing the spread.",
+        "ru": "Сколько площадка берёт за заявку, исполняющуюся сразу по стакану. Арбитраж почти всегда платит именно её: ждать — значит потерять спред."
+      }
+    },
+    {
+      "id": "ticker-collision",
+      "title": { "en": "Ticker collision", "ru": "Коллизия тикера" },
+      "short": {
+        "en": "Two different coins listed under the same symbol on different venues. The spread between them looks enormous and is not real: the trade is not hedged.",
+        "ru": "Две РАЗНЫЕ монеты под одним символом на разных площадках. Спред между ними выглядит огромным и нереален: сделка не хеджируется."
+      }
+    },
+    {
+      "id": "liquidity",
+      "title": { "en": "Liquidity", "ru": "Ликвидность" },
+      "short": {
+        "en": "How much can be bought or sold without moving the price. A spread on a thin market applies to a sum that may be smaller than your order.",
+        "ru": "Сколько можно купить или продать, не сдвинув цену. Спред на тонком рынке касается суммы, которая может оказаться меньше вашей заявки."
+      }
+    }
+  ]
+}
