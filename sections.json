@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "comment": "Порядок и названия разделов учебника. Порядок задаётся здесь, а не в коде: перестановка раздела не должна требовать выкладки сервиса.",
+  "sections": [
+    { "id": "start",     "order": 1, "title": { "en": "Getting started",      "ru": "Начало" } },
+    { "id": "mechanics", "order": 2, "title": { "en": "Arbitrage mechanics",  "ru": "Механика арбитража" } },
+    { "id": "risk",      "order": 3, "title": { "en": "Risks",                "ru": "Риски" } },
+    { "id": "practice",  "order": 4, "title": { "en": "Practice",             "ru": "Практика" } },
+    { "id": "economics", "order": 5, "title": { "en": "Economics",            "ru": "Экономика" } },
+    { "id": "tools",     "order": 6, "title": { "en": "Tools",                "ru": "Инструменты" } },
+    { "id": "glossary",  "order": 7, "title": { "en": "Glossary",             "ru": "Словарь терминов" } }
+  ]
+}
