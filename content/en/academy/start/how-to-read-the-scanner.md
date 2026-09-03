@@ -26,6 +26,8 @@ that moment — the data shifts between page requests, which is expected).
 | pairs above 10 % | 177 (13 %) |
 | flagged as possible collisions | 98 |
 
+![The ST0NKS scanner shelf, sorted by tradability: the first rows show spreads from 0.37 to 48.20 percent; measured 3 September 2026](/media/scanner-shelf-b0a5be2402f8fa09.png)
+
 The first row is the one that matters. **A typical pair pays a third of a percent.** That is what a
 market with fast participants looks like: anything conspicuous gets closed, and a thin layer is what
 remains.
