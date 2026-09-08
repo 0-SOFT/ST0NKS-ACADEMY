@@ -1,14 +1,11 @@
 {
-  "version": 2,
-  "comment": "Словарь терминов интерфейса. Поле slug — НЕОБЯЗАТЕЛЬНОЕ и ставится только тогда, когда статья УЖЕ написана НА ОБОИХ ЯЗЫКАХ: ссылка в никуда выглядит рабочей ровно до клика, а проверка целостности отвергает весь набор, если термин ведёт в ненаписанное. Пояснение полезно само по себе, и термин без статьи вполне живой. Версия 20.6.0: статьи написаны, ссылки проставлены у всех восьми терминов.",
+  "version": 3,
+  "comment": "Словарь терминов. Поле slug ставится только когда статья написана на обоих языках, иначе целостность отвергает весь набор. Версия 21.3.0: базовый набор из восьми терминов дополнен словарём арбитражника; новые термины пока без ссылок на статьи.",
   "terms": [
     {
       "id": "arbitrage",
       "slug": "what-is-arbitrage",
-      "title": {
-        "en": "Arbitrage",
-        "ru": "Арбитраж"
-      },
+      "title": { "en": "Arbitrage", "ru": "Арбитраж" },
       "short": {
         "en": "Buying an asset where it is cheaper and selling it, at the same time, where it is dearer. The whole difficulty hides in the words \"at the same time\".",
         "ru": "Покупка актива там, где он дешевле, и одновременная продажа там, где он дороже. Вся сложность прячется в слове «одновременная»."
@@ -17,10 +14,7 @@
     {
       "id": "spread",
       "slug": "how-spread-is-computed",
-      "title": {
-        "en": "Spread",
-        "ru": "Спред"
-      },
+      "title": { "en": "Spread", "ru": "Спред" },
       "short": {
         "en": "The price difference between two venues, as a percentage. Not profit: fees, slippage and the network fee are still to be subtracted from it.",
         "ru": "Разница цен между двумя площадками в процентах. Это не прибыль: из неё ещё вычтут комиссии, проскальзывание и комиссию сети."
@@ -28,75 +22,345 @@
     },
     {
       "id": "orderbook",
-      "title": {
-        "en": "Order book",
-        "ru": "Стакан"
-      },
+      "slug": "liquidity-and-slippage",
+      "title": { "en": "Order book", "ru": "Стакан" },
       "short": {
         "en": "The list of live buy and sell orders with their sizes. The top line shows the best price, but only for the amount that actually sits there.",
         "ru": "Список живых заявок на покупку и продажу с их объёмами. Верхняя строка показывает лучшую цену — но только на тот объём, который там действительно лежит."
-      },
-      "slug": "liquidity-and-slippage"
+      }
     },
     {
       "id": "slippage",
-      "title": {
-        "en": "Slippage",
-        "ru": "Проскальзывание"
-      },
+      "slug": "liquidity-and-slippage",
+      "title": { "en": "Slippage", "ru": "Проскальзывание" },
       "short": {
         "en": "The gap between the price you saw and the price you got. A large order eats through the book and fills worse than its top line promised.",
         "ru": "Разрыв между увиденной ценой и полученной. Крупная заявка проедает стакан и исполняется хуже, чем обещала верхняя строка."
-      },
-      "slug": "liquidity-and-slippage"
+      }
     },
     {
       "id": "funding",
-      "title": {
-        "en": "Funding rate",
-        "ru": "Фандинг"
-      },
+      "slug": "perpetuals-and-funding",
+      "title": { "en": "Funding rate", "ru": "Фандинг" },
       "short": {
         "en": "A periodic payment between long and short holders of a perpetual contract. It can turn a profitable position into a losing one if you hold it long enough.",
         "ru": "Периодическая выплата между держателями длинных и коротких позиций в бессрочном контракте. При долгом удержании способен сделать прибыльную позицию убыточной."
-      },
-      "slug": "perpetuals-and-funding"
+      }
     },
     {
       "id": "taker-fee",
-      "title": {
-        "en": "Taker fee",
-        "ru": "Комиссия taker"
-      },
+      "slug": "fees-and-break-even",
+      "title": { "en": "Taker fee", "ru": "Комиссия taker" },
       "short": {
         "en": "What the venue charges for an order that executes immediately against the book. Arbitrage almost always pays it: waiting means losing the spread.",
         "ru": "Сколько площадка берёт за заявку, исполняющуюся сразу по стакану. Арбитраж почти всегда платит именно её: ждать — значит потерять спред."
-      },
-      "slug": "fees-and-break-even"
+      }
     },
     {
       "id": "ticker-collision",
-      "title": {
-        "en": "Ticker collision",
-        "ru": "Коллизия тикера"
-      },
+      "slug": "ticker-collision",
+      "title": { "en": "Ticker collision", "ru": "Коллизия тикера" },
       "short": {
         "en": "Two different coins listed under the same symbol on different venues. The spread between them looks enormous and is not real: the trade is not hedged.",
         "ru": "Две РАЗНЫЕ монеты под одним символом на разных площадках. Спред между ними выглядит огромным и нереален: сделка не хеджируется."
-      },
-      "slug": "ticker-collision"
+      }
     },
     {
       "id": "liquidity",
-      "title": {
-        "en": "Liquidity",
-        "ru": "Ликвидность"
-      },
+      "slug": "liquidity-and-slippage",
+      "title": { "en": "Liquidity", "ru": "Ликвидность" },
       "short": {
         "en": "How much can be bought or sold without moving the price. A spread on a thin market applies to a sum that may be smaller than your order.",
         "ru": "Сколько можно купить или продать, не сдвинув цену. Спред на тонком рынке касается суммы, которая может оказаться меньше вашей заявки."
-      },
-      "slug": "liquidity-and-slippage"
+      }
+    },
+    {
+      "id": "cex",
+      "title": { "en": "CEX", "ru": "CEX" },
+      "short": {
+        "en": "A centralized exchange run by a single company, which holds your funds and matches orders on its own servers.",
+        "ru": "Централизованная биржа под управлением одной компании: она хранит ваши средства и сводит заявки на своих серверах."
+      }
+    },
+    {
+      "id": "dex",
+      "title": { "en": "DEX", "ru": "DEX" },
+      "short": {
+        "en": "A decentralized exchange running on smart contracts, with no central operator. You trade straight from your own wallet.",
+        "ru": "Децентрализованная биржа на смарт-контрактах, без центрального оператора. Торговля идёт прямо из вашего кошелька."
+      }
+    },
+    {
+      "id": "futures",
+      "title": { "en": "Futures", "ru": "Фьючерсы" },
+      "short": {
+        "en": "Derivative contracts that let you open long or short positions with leverage, without holding the asset itself.",
+        "ru": "Производные контракты, позволяющие открывать длинные или короткие позиции с плечом, не держа сам актив."
+      }
+    },
+    {
+      "id": "perpetual",
+      "title": { "en": "Perpetual", "ru": "Перпетуальный фьючерс" },
+      "short": {
+        "en": "A futures contract with no expiry date. Its price is kept near spot by the funding mechanism.",
+        "ru": "Фьючерс без даты истечения. Его цена удерживается вблизи спота механизмом фандинга."
+      }
+    },
+    {
+      "id": "premarket",
+      "title": { "en": "Pre-market", "ru": "Премаркет" },
+      "short": {
+        "en": "Trading of a token before its official market opens. Prices there are volatile and thin.",
+        "ru": "Торги токеном до официального открытия рынка. Цены на них подвижны, а ликвидность мала."
+      }
+    },
+    {
+      "id": "aggregator",
+      "title": { "en": "Aggregator", "ru": "Агрегатор" },
+      "short": {
+        "en": "A service that picks the cheapest exchange route across several swappers. It is a route finder, not a swapper itself.",
+        "ru": "Сервис, подбирающий самый выгодный маршрут обмена среди нескольких свопалок. Это поисковик маршрута, а не сама свопалка."
+      }
+    },
+    {
+      "id": "bridge",
+      "title": { "en": "Bridge", "ru": "Мост" },
+      "short": {
+        "en": "A tool for moving an asset between blockchain networks, which are otherwise isolated from one another.",
+        "ru": "Инструмент перевода актива между блокчейн-сетями, которые иначе изолированы друг от друга."
+      }
+    },
+    {
+      "id": "long",
+      "title": { "en": "Long", "ru": "Лонг" },
+      "short": {
+        "en": "A buy position, opened expecting the price to rise.",
+        "ru": "Сделка на покупку в расчёте на рост цены."
+      }
+    },
+    {
+      "id": "short",
+      "title": { "en": "Short", "ru": "Шорт" },
+      "short": {
+        "en": "A sell position, opened expecting the price to fall.",
+        "ru": "Сделка на продажу в расчёте на снижение цены."
+      }
+    },
+    {
+      "id": "index-price",
+      "title": { "en": "Index price", "ru": "Индексная цена" },
+      "short": {
+        "en": "An averaged asset price computed from several exchanges to avoid sharp jumps and manipulation. Usually the spot price.",
+        "ru": "Усреднённая цена актива по данным нескольких бирж, чтобы избежать резких скачков и манипуляций. Как правило — цена спота."
+      }
+    },
+    {
+      "id": "mark-price",
+      "title": { "en": "Mark price", "ru": "Маркировочная цена" },
+      "short": {
+        "en": "The calculated price an exchange uses to decide liquidations. Its lag behind the index price is what drives the funding rate.",
+        "ru": "Расчётная цена, по которой биржа определяет ликвидации. Её отставание от индексной цены и есть причина начисления фандинга."
+      }
+    },
+    {
+      "id": "hedging",
+      "title": { "en": "Hedging", "ru": "Хеджирование" },
+      "short": {
+        "en": "Opening opposite positions at once (long on one venue, short on another) to lock a difference and shield it from volatility.",
+        "ru": "Одновременное открытие противоположных позиций (лонг на одной бирже, шорт на другой) для фиксации разницы и защиты от волатильности."
+      }
+    },
+    {
+      "id": "squeeze",
+      "title": { "en": "Squeeze", "ru": "Сквиз" },
+      "short": {
+        "en": "A sharp price move that knocks out highly leveraged positions.",
+        "ru": "Резкое движение цены, выбивающее позиции с высоким плечом."
+      }
+    },
+    {
+      "id": "isolated-margin",
+      "title": { "en": "Isolated margin", "ru": "Изолированная маржа" },
+      "short": {
+        "en": "A mode where collateral is limited to one position: its liquidation does not touch the rest of the account.",
+        "ru": "Режим, при котором залог ограничен одной позицией: её ликвидация не затрагивает остальной счёт."
+      }
+    },
+    {
+      "id": "volume",
+      "title": { "en": "Volume", "ru": "Объём" },
+      "short": {
+        "en": "How much of an asset was traded over a period. Low volume is a warning that a pair may be hard to exit.",
+        "ru": "Сколько актива наторговали за период. Низкий объём — сигнал, что из связки может быть трудно выйти."
+      }
+    },
+    {
+      "id": "listing",
+      "title": { "en": "Listing", "ru": "Листинг" },
+      "short": {
+        "en": "The addition of a new asset for trading on an exchange. Fresh listings often carry entry limits.",
+        "ru": "Добавление нового актива для торговли на бирже. На свежих листингах часто действуют лимиты на вход."
+      }
+    },
+    {
+      "id": "delisting",
+      "title": { "en": "Delisting", "ru": "Делистинг" },
+      "short": {
+        "en": "The removal of an asset from an exchange and the end of its trading.",
+        "ru": "Удаление актива с биржи и прекращение торгов по нему."
+      }
+    },
+    {
+      "id": "swap",
+      "title": { "en": "Swap", "ru": "Своп" },
+      "short": {
+        "en": "Exchanging one token for another on a decentralized exchange.",
+        "ru": "Обмен одного токена на другой на децентрализованной бирже."
+      }
+    },
+    {
+      "id": "gas-fee",
+      "title": { "en": "Gas fee", "ru": "Газ" },
+      "short": {
+        "en": "The fee paid to a blockchain for processing a transaction, in the network's native token. Too low and the transaction does not go through.",
+        "ru": "Комиссия блокчейну за проведение транзакции, в нативном токене сети. Слишком низкая — транзакция не пройдёт."
+      }
+    },
+    {
+      "id": "mempool",
+      "title": { "en": "Mempool", "ru": "Мемпул" },
+      "short": {
+        "en": "The queue of unconfirmed transactions. While a transaction waits there it is visible to everyone, which is what MEV bots exploit.",
+        "ru": "Очередь неподтверждённых транзакций. Пока транзакция ждёт в ней, её видно всем — этим и пользуются MEV-боты."
+      }
+    },
+    {
+      "id": "farming",
+      "title": { "en": "Farming", "ru": "Фарминг" },
+      "short": {
+        "en": "Earning yield by providing liquidity to DeFi protocols.",
+        "ru": "Получение дохода за предоставление ликвидности в DeFi-протоколах."
+      }
+    },
+    {
+      "id": "tvl",
+      "title": { "en": "TVL", "ru": "TVL" },
+      "short": {
+        "en": "Total value locked — the total funds held in a DeFi protocol, a rough measure of its size.",
+        "ru": "Общий объём средств, заблокированных в DeFi-протоколе, — грубая мера его размера."
+      }
+    },
+    {
+      "id": "mev",
+      "title": { "en": "MEV", "ru": "MEV" },
+      "short": {
+        "en": "Maximal extractable value — profit taken by controlling the order of transactions inside a block.",
+        "ru": "Прибыль, извлекаемая за счёт управления порядком транзакций внутри блока."
+      }
+    },
+    {
+      "id": "front-running",
+      "title": { "en": "Front running", "ru": "Front running" },
+      "short": {
+        "en": "Slipping your trade in ahead of a large pending order to earn on the price move it causes.",
+        "ru": "Исполнение своей сделки перед крупным чужим ордером, чтобы заработать на вызванном им движении цены."
+      }
+    },
+    {
+      "id": "backrunning",
+      "title": { "en": "Backrunning", "ru": "Backrunning" },
+      "short": {
+        "en": "A trade placed right after someone else's transaction — the second half of a sandwich attack.",
+        "ru": "Сделка сразу после чужой транзакции — вторая половина сэндвич-атаки."
+      }
+    },
+    {
+      "id": "sandwich",
+      "title": { "en": "Sandwich attack", "ru": "Сэндвич-атака" },
+      "short": {
+        "en": "Front running and backrunning placed around a victim's trade: the victim gets heavy slippage, the attacker keeps the difference.",
+        "ru": "Front running и backrunning вокруг сделки жертвы: та получает сильное проскальзывание, атакующий забирает разницу."
+      }
+    },
+    {
+      "id": "anti-spread",
+      "title": { "en": "Anti-spread", "ru": "Анти-спред" },
+      "short": {
+        "en": "When prices do not just converge but cross: the long side rises above the short and the spread goes negative. Distance is measured through zero.",
+        "ru": "Когда цены не просто сходятся, а меняются местами: лонг уходит выше шорта, и спред становится отрицательным. Расстояние измеряется через ноль."
+      }
+    },
+    {
+      "id": "entry-spread",
+      "title": { "en": "Entry spread", "ru": "Спред входа" },
+      "short": {
+        "en": "The gap between the ask of the long exchange and the bid of the short exchange — the prices a trade will actually fill at.",
+        "ru": "Разница между аском биржи лонга и бидом биржи шорта — цены, по которым сделка реально исполнится."
+      }
+    },
+    {
+      "id": "exit-spread",
+      "title": { "en": "Exit spread", "ru": "Спред выхода" },
+      "short": {
+        "en": "The gap between the bid of the long exchange and the ask of the short. It must not exceed the entry spread, or the exit loses money.",
+        "ru": "Разница между бидом биржи лонга и аском биржи шорта. Не должен быть больше спреда входа, иначе выход убыточен."
+      }
+    },
+    {
+      "id": "orderbook-hole",
+      "title": { "en": "Order-book hole", "ru": "Дырка в стакане" },
+      "short": {
+        "en": "A thin book where the exit spread is worse than the entry spread from the start — a pair you cannot leave without a loss.",
+        "ru": "Разрежённый стакан, где спред выхода изначально хуже спреда входа, — связка, из которой нельзя выйти без потерь."
+      }
+    },
+    {
+      "id": "exchange-baskets",
+      "title": { "en": "Exchange baskets", "ru": "Корзины бирж" },
+      "short": {
+        "en": "Splitting venues into two groups by their funding-rate formula. It decides which side of a pair — long or short — to open on each.",
+        "ru": "Разделение площадок на две группы по формуле ставки финансирования. Оно определяет, какую сторону связки — лонг или шорт — открывать на каждой."
+      }
+    },
+    {
+      "id": "index-components",
+      "title": { "en": "Index components", "ru": "Компоненты индекса" },
+      "short": {
+        "en": "The set of venues whose prices an exchange uses to compute its index price, each with a weight. An exchange may change its set without warning.",
+        "ru": "Перечень площадок, из цен которых биржа считает индексную цену, с весом каждой. Биржа может изменить его без предупреждения."
+      }
+    },
+    {
+      "id": "organic-spread",
+      "title": { "en": "Organic spread", "ru": "Органический спред" },
+      "short": {
+        "en": "A spread that has a mechanism to converge: deposits and withdrawals are open, index components match, and the cause is a market one such as funding.",
+        "ru": "Спред, у которого есть механизм схождения: выводы и депозиты открыты, компоненты индекса совпадают, а причина расхождения рыночная — например, фандинг."
+      }
+    },
+    {
+      "id": "open-interest",
+      "title": { "en": "Open interest", "ru": "Открытый интерес" },
+      "short": {
+        "en": "The total size of open positions in an instrument. On many coins it is small, and a large entry skews it — some exchanges then change the funding rate.",
+        "ru": "Суммарный объём открытых позиций по инструменту. На многих монетах он мал, и крупный вход перекашивает его — некоторые биржи в ответ меняют фандинг."
+      }
+    },
+    {
+      "id": "long-short-ratio",
+      "title": { "en": "Long/short ratio", "ru": "Коэффициент лонг-шорт" },
+      "short": {
+        "en": "The ratio of long to short position holders. A secondary metric used to judge whether the funding rate will actually be charged.",
+        "ru": "Соотношение держателей длинных и коротких позиций. Вторичная метрика: по ней оценивают, будет ли фандинг начислен на самом деле."
+      }
+    },
+    {
+      "id": "router",
+      "title": { "en": "Router", "ru": "Роутер" },
+      "short": {
+        "en": "The exchange route a swapper or bridge picks automatically. On a failed swap you change the router by hand.",
+        "ru": "Маршрут обмена, который свопалка или мост подбирает автоматически. При неудачном свопе роутер меняют вручную."
+      }
     }
   ]
 }
